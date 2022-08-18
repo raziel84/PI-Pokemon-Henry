@@ -30,6 +30,24 @@ const getTypes = async (req, res, next) => {
   }
 };
 
+//POST
+const postTipo = async (req, res, next) => {
+  const { tipo } = req.body;
+  const nuevo = { Nombre: tipo };
+  console.log(nuevo);
+
+  try {
+    await Tipo.create(nuevo);
+  } catch (error) {
+    res.status(404).json({
+      message: "No se pudo crear el tipo. Revise los datos enviados",
+      function: "post",
+      error: error,
+    });
+  }
+};
+
 module.exports = {
   getTypes,
+  postTipo,
 };
