@@ -1,0 +1,29 @@
+.main > div > label {
+  font-size: 4rem;
+  color: #ffcb02;
+  text-shadow: #3a60ab -0.25rem 0.25rem;
+  padding: 5px;
+  margin: 5px;
+  margin-top: 3rem;
+}
+
+.button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: rgba(255, 85, 85, 0.25);
+}
+
+.img {
+  border: none;
+  border-radius: 0.5rem;
+}

@@ -1,0 +1,33 @@
+.card {
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+
+  padding: 0.25rem;
+
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #b8becc;
+
+  transition: 250ms;
+}
+
+.card:hover {
+  background-color: #3a60ab;
+}
+
+.cardName,
+.cardType {
+  text-transform: capitalize;
+}
+
+.cardName {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.cardType {
+  font-size: 0.75rem;
+}

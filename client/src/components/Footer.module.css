@@ -1,0 +1,22 @@
+.pag > ul {
+  display: inline-block;
+  padding: 0;
+  margin: 8px 0;
+}
+
+.pag > ul > li {
+  display: inline;
+}
+
+.pag > ul > li > label {
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.pag > ul > li > label:hover {
+  background-color: rgba(255, 85, 85, 0.25);
+}

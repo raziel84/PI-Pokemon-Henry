@@ -1,0 +1,59 @@
+.create {
+  margin: 20px;
+}
+
+.create > h1 {
+  margin: 5px;
+  padding: 5px;
+
+  font-size: 2rem;
+  color: #ffcb02;
+  text-shadow: #3a60ab -0.25rem 0.25rem;
+}
+
+.button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: rgba(255, 85, 85, 0.25);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formCampos {
+  align-items: center;
+  justify-content: center;
+}
+
+.formCampos > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 1rem;
+  padding: 1px;
+  row-gap: 0.75rem;
+}
+
+.formCampos > div > label {
+  text-transform: capitalize;
+  color: white;
+  text-align: left;
+}
+
+.creado {
+  font-size: 2rem;
+  color: #ffcb02;
+  text-shadow: #3a60ab -0.2rem 0.2rem;
+}
