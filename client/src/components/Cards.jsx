@@ -48,30 +48,34 @@ function Cards() {
     e.preventDefault();
     console.log("llamada al filtro origen " + e.target.value);
     dispatch(filtroPorOrigen(e.target.value));
+    actualizarPagina(1);
   };
   //FILTRO POR TIPO DE POKEMON
   const filtroTipoHandler = (e) => {
     e.preventDefault();
 
     dispatch(filtroPorTipo(e.target.value));
+    actualizarPagina(1);
   };
   //ORDENAMIENTO POR ORDEN ALFABETICO
   const ordenAscDescHandler = (e) => {
     e.preventDefault();
 
     dispatch(ordenAscDesc(e.target.value));
+    actualizarPagina(1);
   };
   //ORDENAMIENTO POR ATAQUE
   const ordenPorAtaqueHandler = (e) => {
     e.preventDefault();
 
     dispatch(ordenPorAtaque(e.target.value));
+    actualizarPagina(1);
   };
 
   return (
     <div className={style.cardsContenedorPadre} key={pokemons.length}>
       <section>
-        <SearchBar />
+        <SearchBar actualizarPagina={actualizarPagina} />
       </section>
 
       <section className={style.menu}>
@@ -110,7 +114,8 @@ function Cards() {
           <option value="Creado">Creado</option>
         </select>
         <select
-          className={style.cardsSelect}
+          //ver porque no toma el estilo style.cardsSelect
+          className={style.btnMenu}
           onChange={(e) => filtroTipoHandler(e)}
         >
           {tiposPk?.map((tipo) => {

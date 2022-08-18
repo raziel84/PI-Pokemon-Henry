@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 
 import style from "./SearchBar.module.css";
 
-function SearchBar() {
+function SearchBar({ actualizarPagina }) {
   const dispatch = useDispatch();
 
   //MANEJADORES
@@ -15,6 +15,7 @@ function SearchBar() {
     const input = document.getElementById("buscado");
     dispatch(nombre(input.value));
     input.value = "";
+    actualizarPagina(1);
   };
 
   return (

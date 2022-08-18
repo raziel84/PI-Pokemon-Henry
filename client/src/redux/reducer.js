@@ -111,13 +111,13 @@ const casos = {
   },
   [FILTRO_POR_ORIGEN]: (state, action) => {
     console.log("filtro origen " + action.payload);
-    const pokemons = state.todosLosPk;
+    const pkOrigen = state.todosLosPk;
     const pkFiltrados =
       action.payload === "todos"
-        ? pokemons
+        ? pkOrigen
         : action.payload === "Creado"
-        ? pokemons.filter((pk) => pk.hasOwnProperty(action.payload))
-        : pokemons.filter((pk) => !pk.hasOwnProperty("Creado"));
+        ? pkOrigen.filter((pk) => pk.hasOwnProperty(action.payload))
+        : pkOrigen.filter((pk) => !pk.hasOwnProperty("Creado"));
     return { ...JSON.parse(JSON.stringify(state)), pokemons: pkFiltrados };
   },
   [FILTRO_POR_TIPO]: (state, action) => {
